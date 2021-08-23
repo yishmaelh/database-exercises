@@ -1,12 +1,5 @@
 use codeup_test_db;
+describe albums;
 
-create table albums (
-    id int (10) unsigned,
-    artist varchar(50),
-    name varchar(2502),
-    releasedate int(4),
-    sales float,
-    genre varchar(15),
-    PRIMARY KEY (id)
-
-)
+insert into albums(artist, name, release_date, sales, genre)
+values ('prince', 'purple rain', '1984-06-24', 4.6, 'pop rock');
