@@ -27,3 +27,9 @@ FROM employees.employees
 WHERE year(hire_date) BETWEEN 1990 AND 1999
   AND month(birth_date) = 12
   AND day(birth_date) = 25;
+
+
+use codeup_test_db;
+
+alter table albums
+add unique index (artist,name);
