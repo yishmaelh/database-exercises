@@ -16,7 +16,7 @@ from employees as e
               on d.dept_no = dm.dept_no
 where dm.to_date = '9999-01-01'
   and gender = 'F'
-order by d.dept_name asc;
+order by d.dept_name;
 
 select distinct title, COUNT(title) as 'Total'
 from employees as e
@@ -25,7 +25,7 @@ from employees as e
          join departments as d
               on d.dept_no = de.dept_no
          join titles as t
-              ON t.emp_no = e.emp_no
+              on t.emp_no = e.emp_no
 where de.to_date = '9999-01-01' and d.dept_name = 'Customer Service' group by title;
 
 
@@ -41,4 +41,4 @@ from employees as e
          join departments as d
               on d.dept_no = dm.dept_no
 where s.to_date = '9999-01-01' and dm.to_date = '9999-01-01'
-order by `Department Name` asc;
+order by `Department Name`;
