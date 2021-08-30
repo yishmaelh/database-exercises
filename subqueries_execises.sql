@@ -11,3 +11,9 @@ where emp_no in (
     from employees.employees e
     where e.first_name = 'Aamod'
 );
+
+select e.first_name, e.last_name
+from employees as e
+where e.gender = 'F'
+  and e.emp_no in (select dm.emp_no from dept_manager as dm where dm.to_date like '9999-01-01');
+
